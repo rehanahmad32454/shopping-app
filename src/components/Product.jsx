@@ -7,7 +7,6 @@ export const Product = ({ product }) => {
   const title = `${product.title.substring(0, 16)}...`;
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  console.log(cart);
   function add(product) {
     dispatch(addToCart(product));
     toast.success("Item Added to cart");
