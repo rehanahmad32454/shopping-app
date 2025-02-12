@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 
 export const Navbar = () => {
   const cart = useSelector((state) => state.cart);
-  console.log(cart);
   return (
     <div className="w-full bg-indigo-950 fixed -top-0 p-2.5 z-20">
       <div className="max-w-[1200px] flex justify-between mx-auto">

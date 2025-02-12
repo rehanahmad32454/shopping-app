@@ -9,7 +9,6 @@ export const Home = () => {
       setLoading(true);
       const data = await fetch("https://fakestoreapi.com/products");
       const res = await data.json();
-      console.log(res);
       setProductData(res);
     } catch (error) {
       console.log(error);
