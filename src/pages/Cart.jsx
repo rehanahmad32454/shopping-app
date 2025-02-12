@@ -15,9 +15,19 @@ export const Cart = () => {
             {cart.length > 0 ? (
               cart.map((item) => <CartItems item={item} key={item.id} />)
             ) : (
-              <div>
-                <div>No items in cart</div>
-                <Link to="/">SHOP NOW</Link>
+              <div className="flex w-screen h-[80vh] items-center justify-center">
+                <div className="flex flex-col gap-y-5">
+                  <div className="text-2xl font-medium">
+                    Your cart is empty!
+                  </div>
+                  <div className="flex justify-center">
+                    <Link to="/">
+                      <button className="bg-green-700 rounded-md px-4 py-2 font-medium text-white hover:text-green-700 hover:bg-gray-100 border-green-700 border-2 ease-in duration-200 cursor-pointer">
+                        SHOP NOW
+                      </button>
+                    </Link>
+                  </div>
+                </div>
               </div>
             )}
           </div>
@@ -35,7 +45,8 @@ export const Cart = () => {
                 <div>
                   <div className="text-xl">{`Total Items: ${cart.length}`}</div>
                   <div className="text-xl pb-2">
-                    Total Amount :<span className="font-bold">{` $${totalPrice}`}</span>
+                    Total Amount :
+                    <span className="font-bold">{` $${totalPrice}`}</span>
                   </div>
                   <button className="border-2 cursor-pointer bg-green-700 w-full px-4 py-2 rounded-md text-white font-bold text-xl hover:bg-gray-100 hover:text-green-700 hover:border-green-700 ease-in duration-200">
                     Checkout Now

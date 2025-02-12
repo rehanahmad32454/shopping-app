@@ -13,7 +13,7 @@ export const Navbar = () => {
           <img src={logo} width={150}></img>
         </Link>
         <div className="flex text-white gap-x-8 items-center">
-          <div className="text-[18px]">
+          <div className="text-[18px] hover:text-green-400">
             <Link to="/">Home</Link>
           </div>
           <div className="relative">
@@ -23,7 +23,7 @@ export const Navbar = () => {
               </div>
             )}
             <Link to="/cart">
-              <FaCartShopping size={26} />
+              <FaCartShopping className="hover:text-green-400" size={26} />
             </Link>
           </div>
         </div>
