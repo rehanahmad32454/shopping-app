@@ -12,16 +12,16 @@ export const CartItems = ({ item }) => {
   }
   return (
     <div
-      className={`w-full flex-col flex sm:flex-row sm:items-center justify-center gap-x-3 p-4 ${
+      className={`w-full flex-col flex sm:flex-row sm:items-center justify-between gap-x-3 p-4 ${
         cart.length > 1 && "border-b-2"
       }`}
     >
-      <div className="sm:w-[40%] flex justify-center">
-        <img className="w-[60%] object-contain" src={item.image}></img>
+      <div className="w-full sm:w-[50%] flex justify-center">
+        <img className="w-[50%] bg-cover" src={item.image}></img>
       </div>
       <div className="sm:w-[50%] flex flex-col gap-y-5 ">
         <h3 className="text-2xl font-medium">
-          {item.description.substring(0, 16)}
+          {`${item.description.substring(0, 16)}...`}
         </h3>
         <p>{`${item.description.split(" ").slice(0, 10).join(" ")}...`}</p>
         <div>

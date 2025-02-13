@@ -9,7 +9,7 @@ export const Cart = () => {
   return (
     <div className="w-full flex justify-center flex-wrap">
       <Navbar />
-      <div className="max-w-[1250px]">
+      <div className="max-w-[1200px] p-4">
         <div className="max-w-full flex md:gap-x-16 flex-col gap-y-16 md:flex-row">
           <div className="w-full flex flex-col sm:items-center">
             {cart.length > 0 ? (
